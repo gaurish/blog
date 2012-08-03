@@ -1,0 +1,74 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>testing lightbox</h1>
+        <div align="center">
+            <link rel="stylesheet" type="text/css" href="./jquery-ui-1.8.16.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="./colorbox.css">
+        <script type="text/javascript" src="./jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="./jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="./jquery.colorbox-min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                $("#tabs").tabs();
+                $("a.bandwidthgraph_display_a").colorbox({photo: true, rel: 'bandwidthgraph_display_a'});
+          });
+        </script>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Server Status</a></li>
+                <li><a href="#tabs-2">Controls</a></li>
+                <li><a href="#tabs-3">Graphs</a></li>
+            </ul>
+           <div id="tabs-1">
+      <p><b>The server is currently:</b> Unknown<br /></p>
+    </div>
+
+    <div id="tabs-2">
+      <form action="clientarea.php">
+        <input type="hidden" name="action" value='productdetails' /><input type="hidden"
+        name="id" value='4' /><input type="hidden" name="serveraction" value=
+        'custom' /><input type="button" name="a" value='Reboot' />&nbsp;<input type=
+        "button" name="a" value='Power On' />&nbsp;<input type="button" name="a" value=
+        'Power Off' />&nbsp;
+      </form>
+    </div>
+
+    <div id="tabs-3">
+      <div class="bandwidthgraph_display"><b>Hourly</b><br />
+          <a href="http://localhost/PhpProject1/getimage.php" class="bandwidthgraph_display_a">
+      <img src="http://localhost/PhpProject1/getimage.php"width="188" height="62"class=
+      "bandwidthgraph_display_img"/></a></div>
+
+      <div class="bandwidthgraph_display"><b>Daily</b><br />
+          <a href="http://localhost/PhpProject1/getimage.php" class="bandwidthgraph_display_a">
+      <img src="http://localhost/PhpProject1/getimage.php" width="188" height="62" class=
+           "bandwidthgraph_display_img" /></a></div>
+
+      <div class="bandwidthgraph_display"><b>Weekly</b><br />
+          <a href="http://localhost/PhpProject1/getimage.php" class="bandwidthgraph_display_a">
+      <img src="http://localhost/PhpProject1/getimage.php" width="188" height="62" class=
+      "bandwidthgraph_display_img" /></a></div>
+
+      <div class="bandwidthgraph_display"><b>Monthly</b><br />
+          <a href="http://localhost/PhpProject1/getimage.php" class="bandwidthgraph_display_a">
+      <img src="http://localhost/PhpProject1/getimage.php" width="188" height="62" class=
+      "bandwidthgraph_display_img" /></a></div>
+
+      <div class="bandwidthgraph_display"><b>Yearly</b><br />
+          <a href="http://localhost/PhpProject1/getimage.php" class="bandwidthgraph_display_a">
+      <img src="http://localhost/PhpProject1/getimage.php" width="188" height="62" class=
+      "bandwidthgraph_display_img" /></a></div>
+    </div>
+  </div>
+</body>
+</html>

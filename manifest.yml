@@ -1,0 +1,16 @@
+---
+applications:
+  .:
+    name: gaurishblog
+    framework:
+      name: php
+      info:
+        mem: 128M
+        description: PHP Application
+        exec: 
+    url: ${name}.${target-base}
+    mem: 512M
+    instances: 1
+    services:
+      mysql-9b526:
+        type: mysql
